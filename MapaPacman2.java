@@ -13,18 +13,18 @@ public class MapaPacman2 {
                 { '#', '#', '#', '#', '#', '#', '#', '#', '#', '#' }
         };
 
-        int pacmanX = 5; // Posición inicial en X del Pac-Man
-        int pacmanY = 3; // Posición inicial en Y del Pac-Man
+        int pacmanX = 5; 
+        int pacmanY = 3; 
 
         boolean terminado = false;
         Scanner scanner = new Scanner(System.in);
 
         while (!terminado) {
-            // Imprimir el mapa
+            
             for (int i = 0; i < mapa.length; i++) {
                 for (int j = 0; j < mapa[i].length; j++) {
                     if (i == pacmanY && j == pacmanX) {
-                        System.out.print('C'); // C representa al Pac-Man
+                        System.out.print('C'); 
                     } else {
                         System.out.print(mapa[i][j]);
                     }
@@ -32,11 +32,11 @@ public class MapaPacman2 {
                 System.out.println();
             }
 
-            // Leer movimiento del usuario
+            
             System.out.print("Ingrese un movimiento (w/a/s/d): ");
             String movimiento = scanner.nextLine();
 
-            // Actualizar posición del Pac-Man según el movimiento
+ 
             switch (movimiento) {
                 case "w":
                     if (mapa[pacmanY - 1][pacmanX] != '#') {
